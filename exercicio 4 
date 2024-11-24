@@ -1,0 +1,34 @@
+/* 4- Faça um programa que chama uma função para calcular a média aritmética de 4 notas de um aluno,
+imprima a média e mensagem aprovado se média maior ou igual a 7 e reprovado caso contrário. */
+#include <stdio.h>
+
+int somar(int a, int b, int c){
+    return a + b + c ; 
+}
+    
+    
+int main(){
+   int num1, num2, num3, soma, media;
+
+    
+    printf("Digite o primeiro número: ");
+        scanf("%d", &num1);
+    
+            printf("Digite o segundo número: ");
+                scanf("%d", &num2);
+    
+                    printf("Digite o segundo número: ");
+                        scanf("%d", &num3);
+                        
+        soma = somar(num1,num2,num3);
+        
+             media = soma / 3;
+        
+            printf("a  media aritimetica foi de %d \n", media);
+                if(media >= 7){
+                    printf("Voce foi arpovado");
+                }
+                    else
+                    printf("voce foi reprovado")
+    return 0;
+}
