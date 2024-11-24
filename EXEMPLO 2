@@ -1,0 +1,53 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
+#include <string.h> // Inclui a biblioteca para manipulação de strings
+#include <locale.h> // Inclui a biblioteca para configurar a localização
+
+// Define uma estrutura para representar um carro
+typedef struct {
+  char modelo[50];  // Array de caracteres para armazenar o modelo do carro
+  int ano;          // Inteiro para armazenar o ano do carro
+  double preco;      // Double para armazenar o preço do carro
+} Carro;
+
+
+// Função para modificar o preço de um carro
+void modificarPreco(Carro *c, double novoPreco) {
+  // Atribui o novo preço ao atributo `preco` do carro
+  c->preco = novoPreco;
+}
+
+
+// Função para imprimir as informações de um carro
+void imprimirCarro(Carro *c) {
+  // Imprime o modelo, ano e preço do carro formatado
+  printf("Modelo: %s\n", c->modelo);
+  printf("Ano: %d\n", c->ano);
+  printf("Preço: R$ %.2lf\n", c->preco);
+}
+
+
+// Função principal do programa
+int main() {
+  // Define a localização do programa para o português
+  setlocale(LC_ALL, "portuguese");
+
+  // Declara uma variável `carrol` do tipo `Carro`
+  Carro carrol;
+
+  // Copia a string "XyZ" para o atributo `modelo` da variável `carrol`
+  strcpy(carrol.modelo, "XyZ");
+  // Define o ano do carro
+  carrol.ano = 2020;
+  // Define o preço inicial do carro
+  carrol.preco = 90000.00;
+
+  // Imprime uma mensagem informando os dados antes da modificação
+  printf("Dados antes da modificação:\n");
+
+  // Chama a função `imprimirCarro` para imprimir as informações do carro
+  imprimirCarro(&carrol);
+
+  // Modifica o preço do carro para R$ 115000.00
+  modificarPreco(&carrol, 115000.00);
+
+  // Imprime uma mensagem informando os dados após a modificação

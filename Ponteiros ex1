@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+    //contudo do ponteiro e o endereço de NUM
+int main() {
+int n = 507;
+int *pt1; // primeiro indica 
+pt1 = &n;  // depois aponta 
+*pt1 = 20; // altera o valor original da variavel 
+
+// P, para enderço do ponteiro (%p e &p)
+
+    printf("%d %p %p %p\n", n, &n, pt1, &pt1);
+    
+        
+
+return 0;
+}

@@ -1,0 +1,19 @@
+#include <stdio.h>
+struct aluno{ // declarçao sa nossa struct
+    int ra;
+    char nome[100];
+    char curso[20];
+};
+typedef struct aluno t_aluno;
+
+int main(){
+    t_aluno p; // a variavel agora é p
+    
+    scanf("%d", &p.ra);
+     scanf("%s", p.nome);
+      scanf("%s", p.curso); // chamar a variavel p.curso
+      
+      printf("RA=%d Nome=%s Curso=%s \n", p.ra, p.nome, p.curso);
+
+    return 0;
+}

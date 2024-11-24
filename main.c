@@ -1,21 +1,38 @@
 #include <stdio.h>
 
-int calcularResultado(int soma, int primeiroValor, int ultimoValor) {
-    return soma + (primeiroValor * 5) + (ultimoValor * 2);
-}
+int main(void){
+    
+    struct ficha_de_aluno {
+        char nome[50];
+        char disciplina[30];
+        double nota_prova1;
+        double nota_prova2;
+    };
+    
+    struct ficha_de_aluno aluno;
+    
+    printf("---------------- Cadastro de aluno---------------- \n \n \n");
+    
+    printf("nome do aluno ............");
+    fgets(aluno.nome, 50, stdin);
+    
+    printf("Disciplina...........");
+        fgets(aluno.disciplina, 30, stdin);
+        
+        printf("informe a primeira nota ...:");
+            scanf("%lf", &aluno.nota_prova1);
+            
+            printf("informe a segunta nota....:");
+                scanf("%lf", &aluno.nota_prova2);
+                
+                printf("\n \n --------- lendo os dados da Struct --------------");
+                printf("Nome-------------------- %s",aluno.nome);
+                printf("Disciplina-----------------%s",aluno.disciplina);
+                printf("nota da prova 1----------------- %.2f", aluno.nota_prova1);
+                printf("nota da prova 2----------------- %.2f", aluno.nota_prova2);
 
-int main() {
-    int vetor[10];
-    int soma = 0;
-
-    // Preenchendo o vetor com valores de 1 a 10
-    for (int i = 0; i < 10; i++) {
-        vetor[i] = i + 1; // Preenche com valores de 1 a 10
-        soma += vetor[i]; // Soma os elementos
-    }
-
-    int resultado = calcularResultado(soma, vetor[0], vetor[9]);
-    printf("O resultado da função é: %d\n", resultado);
-
+                
+                
+    
     return 0;
 }
