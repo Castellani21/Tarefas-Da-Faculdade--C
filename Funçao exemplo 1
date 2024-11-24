@@ -1,0 +1,25 @@
+ #include <stdio.h>
+ 
+ int soma(int x, int y); // assinatura da funçao 
+ 
+int main(){
+        int n1, n2;
+        
+        printf("digite dois numeros");
+            scanf("%d %d", &n1, &n2);
+            
+            printf("soma = %d", soma(n1,n2)); // chamar a funçao 
+            printf("\n Dentro main: N1 = %d, N2 = %d", n1, n2);
+            
+            
+    return 0;
+}
+
+int soma(int n1, int n2){  // int x, int y
+    n1++;  n2++;// adicionar a variavel 
+     int z = n1+ n2;
+        printf("\n Dentro da funçao soma: N1 = %d, N2 = %d", n1, n2);    
+    return z;
+}
+ 
+ 

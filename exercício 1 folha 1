@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int i=0, jogador1 = 0,jogador2 =0,  jogador3 =0;
+        int jogador = 3, partidas = 5;  
+            int pontos[jogador][partidas];
+                
+                for(i=0; i < jogador; i++){ // i == linha; j == coluna;
+                    for(int j=0; j < partidas; i++){
+                        printf("Digite pontos do jogador: %d", i+1);
+                            scanf("%d", &pontos[jogador][partidas]);
+                                     
+                    }
+                }
+                
+                //falar qual jogador é maior
+                if(jogador1 > jogador2 && jogador3){
+                    printf("Jogador 1 é maior");
+                }
+                else if(jogador2 > jogador1 &&  jogador3){
+                         printf("Jogador 2 é maior");
+                }
+                    else{
+                         printf("Jogador 3 é maior");
+                    }
+    return 0;
+}

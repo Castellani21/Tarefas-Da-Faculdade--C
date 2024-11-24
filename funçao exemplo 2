@@ -1,0 +1,25 @@
+ #include <stdio.h>
+ 
+ int fatorial(int n); // assinatura da funçao 
+ 
+int main(){
+        int n;
+        
+        printf("digite um numero");
+            scanf("%d", &n);
+            
+            printf("fatorial = %d", fatorial(n)); // chamar a funçao 
+            
+            
+    return 0;
+}
+
+int fatorial(int n){
+    if(n == 0)
+         return 1;
+    else
+            return n * fatorial(n-1);
+}      // isso é um for dentro de um if   (por que chama a funçao on else ate atingir a condiçao do if)
+
+ 
+ 
